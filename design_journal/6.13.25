@@ -1,0 +1,48 @@
+Design journal for a Magic the Gathering automatic card sorter:
+
+Written by: Brad Portouw
+Co-author: Courtney LaCroix
+Date: 6/13/25
+
+This is a personal project to build a machine that can sort Magic the Gathering cards autoatically.
+We both have considerably sized collections of cards, roughly a few thousand each, and sorting them by hand takes quite a bit of time.
+Ideally a device could sort cards by a user given criteria to automate the process.
+
+Identifying the challenges of sorting cards:
+
+1. Card sorting is time consuming, and they can be sorted by many different criteria which may not work well with each card type
+2. Knowing what cards are in a collection is difficult without searching after organization; finding 1 card among thousands can be difficult
+3. New cards are added often, and may change the organization of other cards.
+
+A potential automatic solution likely would need to run on a logic controller, like a Raspberry Pi, because it would have to be able to
+differentiate cards based on visual information. By design each card is nearly identical, except for the print of the card
+on it's front face. Therefore a visual recognition would likely be necessary.
+
+Differentiating factors between cards include:
+1. Card Name
+2. Card type
+3. Card color
+4. Card print set
+5. Card print rarity
+6. Card's artist
+7. Card price
+
+If a logic controller can identify these criteria, the cards can be sorted. Ideally the sorting would be done automatically by
+the system visually identifying the cards, then physically separating them without user input.
+
+Many of the criteria above have more than 2 different options, so complexity is a factor.
+In order to sort the cards automatically, the cards will have to be put into different piles, likely by an actuator
+with the number of plies available being the level of differentiation.
+
+After the cards are sorted, the micro controller likely identified each card. In this case, the process of sorting can also
+catalog the cards in a person's collection. Part of managing a collection is recognizing if a card is in stock, essentially
+killing two birds with one stone with this process.
+
+In the end, the ideal design can:
+
+1. Identify a card
+2. Physically sort said card depending upon user defined logic
+3. Catalog cards seen into a dataframe or other data object
+
+
+
