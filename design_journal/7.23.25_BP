@@ -1,0 +1,19 @@
+Design journal for a Magic the Gathering automatic card sorter:
+
+Written by: Brad Portouw
+Date: 6/13/25
+
+Currently revisiting the card sorting project after hiatus.
+
+In order for the project to be feasible, a sensor of some kind is necessary to differentiate cards from one another.
+
+By design cards are meant to be dimensionally identical and only differ based on the face of the card.
+Therefore an optical sensor is likely the only option.
+A raspberry pi is the desired microcontroller in this operation due to both Courtney and I wanting to gain experience using
+the specific controller but also growing our Python skills.
+
+In order to get started, we will need to determine if we can get a camera to recognize a magic card. There are many identifying factors on cards
+but text recognition is likely the best route as it provides the greatest amount of information from one source.
+Image recognition could also work, but would be more complicated, and couldn't be compared as easily as a dataframe.
+
+Many examples of text recognition from a raspberry pi camera can be found online, suggesting it is feasible.
